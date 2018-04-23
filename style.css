@@ -1,0 +1,71 @@
+.main_container {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   -webkit-perspective: 200px; /* Safari 4-8  */
+    perspective: 200px;
+}
+.flip_card {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+ 
+}
+.front_card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  /* backface-visibility: hidden; */
+  overflow: hidden;
+  background: url('bit_front.png');
+      background-size: cover;
+}
+.back_card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  /* backface-visibility: hidden; */
+  overflow: hidden;
+ background: url('bit_front.png');
+    background-size: cover;
+}
+
+.flip_card{
+	-webkit-animation: preloader 2s infinite ease-in-out;
+    -moz-animation: preloader 2s infinite ease-in-out;
+    -ms-animation: preloader 2s infinite ease-in-out;
+    -o-animation: preloader 2s infinite ease-in-out;
+    animation: preloader 2s infinite ease-in-out;
+}
+@-webkit-keyframes preloader {
+    to { -webkit-transform: rotateY(360deg); }
+}
+
+@-moz-keyframes preloader {
+    to { -moz-transform: rotateY(360deg); }
+}
+
+@-ms-keyframes preloader {
+    to { -ms-transform: rotateY(360deg); }
+}
+
+@-o-keyframes preloader {
+    to { -o-transform: rotateY(360deg); }
+}
+
+@keyframes preloader {
+    to { transform: rotateY(360deg); }
+}
